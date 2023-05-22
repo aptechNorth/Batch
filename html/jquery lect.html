@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#test").hide();
+    });
+	$("#show").click(function(){
+		$("#test").show();
+		});
+		    $("#fadein").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+    });
+	    $("#fout").click(function(){
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(3000);
+    });
+  $("#querry").click(function(){
+        $("#panel").slideDown("slow");
+    });
+	$("#panel").click(function(){
+        $("#panel").slideUp("slow");
+    });
+	 $("#sltog1").click(function(){
+        $("#sltog").slideToggle("slow");
+    });
+	/*animation*/
+	$(document).ready(function(){
+    $("#anm1").click(function(){
+        $("#anm").animate({
+            left: '250px',
+            opacity: '1',
+            height: '150px',
+            width: '150px'
+        });
+    });
+});
+	
+	 $("#flip1").click(function(){
+        $("#panel1").slideDown(5000);
+    });
+    $("#stop").click(function(){
+        $("#panel1").stop();
+    });
+
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+
+<button id="hide">Click me</button>
+<button id="show">show </button>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button id="fadein">Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+<button id="fout">Click to fade in boxes</button><br><br>
+
+<div id="querry" style="background-color:#09F">who invent centimeter?</div>
+<div id="panel" style="background-color:#0C6;display:none">centimeter was invented by newton</div>
+<br />
+<div id="sltog1" style="background-color:#9F0">what we are learning in aptech?</div>
+<div id="sltog" style="background-color:#0C6;display:none">Jquerry</div>
+
+
+<img src="download.jpg" id="anm" width="50px" height="50px" />
+<br />
+<button id="anm1">Image Animation</button>
+
+
+<style> 
+#panel, #flip1 {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+
+#panel1 {
+    padding: 50px;
+    display: none;
+}
+</style>
+<div id="flip1">slide it down now</div>
+<div id="panel1"> padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;</div>
+<button id="stop">Stop sliding</button>
+</body>
+</html>

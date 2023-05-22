@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script>
+function hello(){
+	var exp=/^([A-Za-z0-9\_\-])+\@([A-Za-z0-9])+\.([A-Za-z]{2,3})$/;
+	var exp1=/^[a-zA-Z ]+$/;
+	var exp2=/^([1-9]|[1-9][0-9])$/;
+	
+	
+	var input=document.getElementById('email').value;
+	var name=document.getElementById('name').value;
+	var age=document.getElementById('age').value;
+	
+	if(input.length>0 && name.length>0 && age.length>0) {
+		
+		if(exp.test(input)==true)
+		 {
+			 if(exp1.test(name)==true)
+		  {
+			  if(exp2.test(age)==true)
+			  {
+			
+			alert("all fields are correct");
+			}
+			else{
+				alert("age is invalid")
+				}}
+				else{if(exp2.test(age)==true)
+			  {
+			alert("name is invalid")
+			
+			}
+			else{
+				alert("Name and age are invalid")
+				}
+					
+					}}
+	else{
+		 if(exp1.test(name)==true)
+		  {
+			  if(exp2.test(age)==true)
+			  {
+			
+			alert("Email is invalid name and age are ok");
+			}
+			else{
+				alert("email and age is invalid")
+				}}
+				else{if(exp2.test(age)==true)
+			  {
+			alert("email and name are invalid ")
+			
+			}
+			else{
+				alert("Name,age,email are invalid")
+				}
+					
+				}	
+		
+		}	
+		
+		}
+		
+		else{
+			alert("All fields are required");
+			}
+		
+		
+
+	}
+
+
+
+
+</script>
+
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+Enter Email:
+<input type="text" id="email" />
+<br  />
+<br  />
+Enter Name
+<input type="text"  id="name"   />
+<br  />
+<br  />
+Enter Age
+<input type="text"  id="age" />
+
+<button onclick="hello()">Click </button>
+
+
+
+
+</body>
+
+
+
+</html>

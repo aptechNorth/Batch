@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function check(){
+    
+var name_expression=/^[a-zA-Z ]+$/;
+var userName=document.getElementById('user_name').value;
+if(userName.length>0 ) {
+		
+		if(name_expression.test(userName)==true){
+
+document.getElementById('name_chk').innerHTML="Name is perfect";
+        }
+else{
+document.getElementById('name_chk').innerHTML="only alphabets are allowed in name";
+}
+
+
+}
+
+
+
+}
+    </script>
+</head>
+<body>
+   
+<label>Name</label><input type="text" id="user_name" required/><label id="name_chk"></label><br/>
+<!-- <label>Age</label><input type="text" required/><br/>
+<label>Email</label><input type="email" /><br/> -->
+<button onclick="check()">Submit</button>
+
+
+
+
+
+  
+
+
+
+
+</body>
+</html>
